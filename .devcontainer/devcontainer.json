@@ -1,0 +1,54 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Debian",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/anaconda:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/java:1": {
+			"installMaven": true,
+			"version": "latest",
+			"jdkDistro": "open",
+			"gradleVersion": "latest",
+			"mavenVersion": "latest",
+			"antVersion": "latest",
+			"groovyVersion": "latest"
+		},
+		"ghcr.io/devcontainers/features/nix:1": {
+			"multiUser": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/rust:1": {
+			"version": "latest",
+			"profile": "minimal"
+		},
+		"ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "open"
+		},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "ssh-agent npm",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+			"username": "vscode"
+		}
+	}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
